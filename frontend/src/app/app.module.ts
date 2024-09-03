@@ -7,6 +7,11 @@ import { LoginSignupComponent } from './login-signup/login-signup.component';
 import { ConsultaComponent } from './consulta/consulta.component';
 import { AdministracionComponent } from './administracion/administracion.component';
 
+import { CardModule } from 'primeng/card';
+
+import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +21,10 @@ import { AdministracionComponent } from './administracion/administracion.compone
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ButtonModule,
+    CardModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]

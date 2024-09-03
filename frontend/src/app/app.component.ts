@@ -15,12 +15,12 @@ export class AppComponent implements OnInit{
 
   }
   ngOnInit(): void {
-      const links: Array<String> =['admin','login_signup','consulta']
+     /* const links: Array<String> =['admin','login_signup','consulta']
       var contador = 0
       setInterval(()=>{
         this.router.navigate([links[contador%3]])
         contador++
-      },3000)
+      },3000)*/
       
   }
 }
