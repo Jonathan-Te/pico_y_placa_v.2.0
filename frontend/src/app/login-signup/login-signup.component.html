@@ -1,72 +1,42 @@
-<p>login-signup works!</p>
-
-<div>
-    
-    <p-card>
-        <div>
-            <span>
-                Hello!
-            </span>
-            <span>
-                Create Prductive work, together!
-            </span>
-            <div>
-
-            </div>
+<div class="pantalla">
+    <div class="jt-card jt-horizontal" style="max-width: 70%; max-height: 75%;">
+        <div style="max-width: 50%; overflow: hidden;" >
+            <img src="https://th.bing.com/th/id/OIG3.xnOdzX5cfBJ0qoa50xkp?w=1024&h=1024&rs=1&pid=ImgDetMain" />
         </div>
-        <div>
-            <div class="flex flex-column gap-2">
-                <input 
-                    pInputText 
-                    id="username" 
-                    aria-describedby="username-help"/>
-                <small id="username-help">
-                    FULL NAME
-                </small>
-            </div>
-            <div>
-                <div class="flex flex-column gap-2">
-                    <input 
-                        pInputText 
-                        id="age" 
-                        aria-describedby="username-help"/>
-                    <small id="username-age">
-                        AGE
-                    </small>
+        <div class="verticalForm" style=" padding: 10px; min-width: 50%;">
+
+            <div class="verticalForm" style="gap: 35px; margin-top: 40px;">
+                <div class="titulo" style="align-self: flex-start;">
+                    Iniciar Sesion
                 </div>
-                <div class="flex flex-column gap-2">
-                    <input 
-                        pInputText 
-                        id="date-of-birth" 
-                        aria-describedby="username-help"/>
-                    <small id="username-dob">
-                        DATE OF BIRTH
-                    </small>
-                </div>
-            </div>
-            <div class="flex flex-column gap-2">
-                <input 
-                    pInputText 
-                    id="email-adrress" 
-                    aria-describedby="username-help"/>
-                <small id="username-adrress">
-                    E-MAIL ADDRESS
-                </small>
-            </div>
-            <div class="flex flex-column gap-2">
-                <input 
-                    pInputText 
-                    id="password" 
-                    aria-describedby="username-help"/>
-                <small id="username-pass">
-                    PASSWORD
-                </small>
-            </div>
-        </div>
-        <div>
-            <p-button label="SING UP">
+                <div>
+                    <jt-campo etiqueta="Correo Electronico" ayuda="Ingresa tu correo" tipodecampo="mail"
+                        [textoCampo]="value" id="email">
 
-            </p-button>
+                    </jt-campo>
+                </div>
+                <div>
+                    <jt-campo etiqueta="Clave" ayuda="Ingrese la clave" [textoCampo]="value" id="clave"
+                        tipodecampo="password">
+
+                    </jt-campo>
+                </div>
+                <div style="align-self: flex-start;">
+                    <p-checkbox [(ngModel)]="recordarme" [binary]="true" inputId="recuerdame" />
+                    <label>
+                        Recordarme
+                    </label>
+                </div>
+
+
+            </div>
+
+
+
+            <div>
+                <p-button label="Ingresar" />
+            </div>
         </div>
-    </p-card>
+    </div>
+
 </div>

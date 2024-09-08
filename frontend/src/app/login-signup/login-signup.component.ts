@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './login-signup.component.scss'
 })
 export class LoginSignupComponent {
-
+value:string =""
+correo:string=""
+recordarme:boolean=true
 }

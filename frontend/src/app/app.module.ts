@@ -11,20 +11,26 @@ import { CardModule } from 'primeng/card';
 
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
+import { CampoComponent } from './components/campo/campo.component';
+import { FormsModule } from '@angular/forms';
+import { CheckboxModule } from 'primeng/checkbox';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginSignupComponent,
     ConsultaComponent,
-    AdministracionComponent
+    AdministracionComponent,
+    CampoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ButtonModule,
     CardModule,
-    InputTextModule
+    InputTextModule,
+    FormsModule,
+    CheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
