@@ -1,9 +1,9 @@
 <div class="pantalla">
     <div class="jt-card jt-horizontal" style="max-width: 70%; max-height: 75%;">
-        <div style="max-width: 50%; overflow: hidden;" >
+        <div style="max-width: 50%; overflow: hidden;">
             <img src="https://th.bing.com/th/id/OIG3.xnOdzX5cfBJ0qoa50xkp?w=1024&h=1024&rs=1&pid=ImgDetMain" />
         </div>
-        <div class="verticalForm" style=" padding: 10px; min-width: 50%;">
+        <div class="verticalForm" style=" padding: 10px; min-width: 50%;" *ngIf="showLogin" >
 
             <div class="verticalForm" style="gap: 35px; margin-top: 40px;">
                 <div class="titulo" style="align-self: flex-start;">
@@ -11,22 +11,28 @@
                 </div>
                 <div>
                     <jt-campo etiqueta="Correo Electronico" ayuda="Ingresa tu correo" tipodecampo="mail"
-                        [textoCampo]="value" id="email">
+                        [textoCampo]="login.correo" id="email">
 
                     </jt-campo>
                 </div>
                 <div>
-                    <jt-campo etiqueta="Clave" ayuda="Ingrese la clave" [textoCampo]="value" id="clave"
+                    <jt-campo etiqueta="Clave" ayuda="Ingrese la clave" [textoCampo]="login.password" id="clave"
                         tipodecampo="password">
 
                     </jt-campo>
                 </div>
                 <div style="align-self: flex-start;">
-                    <p-checkbox [(ngModel)]="recordarme" [binary]="true" inputId="recuerdame" />
+                    <p-checkbox [(ngModel)]="login.recordarme" [binary]="true" inputId="recuerdame" />
                     <label>
                         Recordarme
                     </label>
                 </div>
+
+                <div style="display: flex; align-items: center;">
+                    <labeL>No tienes cuenta?.. </labeL>
+                    <p-button label="Registrate Aqui !!" [link]="true" (onClick)="cambiarLoginsignup()"/>
+                </div>
+
 
 
             </div>
@@ -37,6 +43,60 @@
                 <p-button label="Ingresar" />
             </div>
         </div>
+
+        <div class="verticalForm" style=" padding: 10px; min-width: 50%;" *ngIf="!showLogin" >
+
+            <div class="verticalForm" style="gap: 15px; margin-top: 40px;">
+                <div class="titulo" style="align-self: flex-start;">
+                    Crea tu cuenta
+                </div>
+                <div>
+                    <jt-campo etiqueta="Nombres" ayuda="Ingresa tu nombre" tipodecampo="text"
+                        [textoCampo]="signup.nombre" id="nombre">
+
+                    </jt-campo>
+                </div>
+                <div>
+                    <jt-campo etiqueta="Correo Electronico" ayuda="Ingresa tu correo" tipodecampo="mail"
+                        [textoCampo]="signup.correo" id="email">
+
+                    </jt-campo>
+                </div>
+                <div>
+                    <jt-campo etiqueta="Clave" ayuda="crea tu clave" [textoCampo]="signup.password" id="clave"
+                        tipodecampo="password">
+
+                    </jt-campo>
+                </div>
+                <div>
+                    <jt-campo etiqueta="Confirmar Clave" ayuda="vuelve a ingresar tu clave"
+                        [textoCampo]="signup.confirmPassword" id="confirmarclave" tipodecampo="password">
+
+                    </jt-campo>
+                </div>
+                <div style="align-self: flex-start;">
+                    <p-checkbox [(ngModel)]="signup.recuerdame" [binary]="true" inputId="recuerdame" />
+                    <label>
+                        Recordarme
+                    </label>
+                </div>
+
+
+            </div>
+            <div style="display: flex; align-items: center;">
+                <labeL>Ya tienes cuenta?.. </labeL>
+                <p-button label="Ingresa Aqui !!" [link]="true" (onClick)="cambiarLoginsignup()"/>
+            </div>
+
+
+
+            <div>
+                <p-button label="Registrar" />
+            </div>
+        </div>
+
+
+
     </div>
 
 </div>
