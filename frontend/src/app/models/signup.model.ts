@@ -1,19 +1,19 @@
 export class SignUp {
-    nombre: string = ""
-    correo: string = ""
-    password: string = ""
+    name: string = ""
+    email: string = ""
+    passw: string = ""
     confirmPassword: string = ""
     recuerdame: boolean = false
 
-    constructor(nombre: string,
-        correo: string,
-        password: string,
+    constructor(name: string,
+        email: string,
+        passw: string,
         confirmPassword: string,
         recuerdame: boolean){
-            this.nombre=nombre
-            this.correo=correo
-            this.password=password
+            this.name=name
+            this.email=email
+            this.passw=passw
             this.confirmPassword=confirmPassword
-            this.recuerdame=this.recuerdame
+            this.recuerdame=recuerdame
         }
 }

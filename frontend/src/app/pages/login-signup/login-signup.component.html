@@ -1,3 +1,9 @@
+
+<div style="position: absolute; top: 0; right: 0; padding: 10px;">
+    <p-button label="Continuar como invitado" (onClick)="validatedNoLogin()"/>
+</div>
+
+
 <div class="pantalla">
     <div class="jt-card jt-horizontal" style="max-width: 70%; max-height: 75%;">
         <div style="max-width: 50%; overflow: hidden;">
@@ -10,13 +16,13 @@
                     Iniciar Sesion
                 </div>
                 <div>
-                    <jt-campo etiqueta="Correo Electronico" ayuda="Ingresa tu correo" tipodecampo="mail"
-                        [textoCampo]="login.correo" id="email">
+                    <jt-campo (textoCampoChange)="login.email=$event" etiqueta="Correo Electronico" ayuda="Ingresa tu correo" tipodecampo="mail"
+                        [textoCampo]="login.email" id="email">
 
                     </jt-campo>
                 </div>
                 <div>
-                    <jt-campo etiqueta="Clave" ayuda="Ingrese la clave" [textoCampo]="login.password" id="clave"
+                    <jt-campo (textoCampoChange)="login.passw=$event" etiqueta="Clave" ayuda="Ingrese la clave" [textoCampo]="login.passw" id="clave"
                         tipodecampo="password">
 
                     </jt-campo>
@@ -40,7 +46,7 @@
 
 
             <div>
-                <p-button label="Ingresar" />
+                <p-button label="Ingresar" (onClick)="execLogIn()"/>
             </div>
         </div>
 
@@ -51,25 +57,25 @@
                     Crea tu cuenta
                 </div>
                 <div>
-                    <jt-campo etiqueta="Nombres" ayuda="Ingresa tu nombre" tipodecampo="text"
-                        [textoCampo]="signup.nombre" id="nombre">
+                    <jt-campo (textoCampoChange)="signup.name=$event" etiqueta="Nombres" ayuda="Ingresa tu nombre" tipodecampo="text"
+                        [textoCampo]="signup.name" id="nombre">
 
                     </jt-campo>
                 </div>
                 <div>
-                    <jt-campo etiqueta="Correo Electronico" ayuda="Ingresa tu correo" tipodecampo="mail"
-                        [textoCampo]="signup.correo" id="email">
+                    <jt-campo (textoCampoChange)="signup.email=$event" etiqueta="Correo Electronico" ayuda="Ingresa tu correo" tipodecampo="mail"
+                        [textoCampo]="signup.email" id="email">
 
                     </jt-campo>
                 </div>
                 <div>
-                    <jt-campo etiqueta="Clave" ayuda="crea tu clave" [textoCampo]="signup.password" id="clave"
+                    <jt-campo (textoCampoChange)="signup.passw=$event" etiqueta="Clave" ayuda="crea tu clave" [textoCampo]="signup.passw" id="clave"
                         tipodecampo="password">
 
                     </jt-campo>
                 </div>
                 <div>
-                    <jt-campo etiqueta="Confirmar Clave" ayuda="vuelve a ingresar tu clave"
+                    <jt-campo (textoCampoChange)="signup.confirmPassword=$event" etiqueta="Confirmar Clave" ayuda="vuelve a ingresar tu clave"
                         [textoCampo]="signup.confirmPassword" id="confirmarclave" tipodecampo="password">
 
                     </jt-campo>
@@ -91,7 +97,7 @@
 
 
             <div>
-                <p-button label="Registrar" />
+                <p-button label="Registrar" (onClick)="execSignUp()"/>
             </div>
         </div>
 

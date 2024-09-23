@@ -1,28 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdministracionComponent } from './administracion/administracion.component';
-import { LoginSignupComponent } from './login-signup/login-signup.component';
-import { ConsultaComponent } from './consulta/consulta.component';
+import { AdministracionComponent } from './pages/administracion/administracion.component';
+import { LoginSignupComponent } from './pages/login-signup/login-signup.component';
+import { ConsultaComponent } from './pages/consulta/consulta.component';
+import { PrincipalComponent } from './pages/principal/principal.component';
 
 const routes: Routes = [
-  {
-    path: 'admin',
-    component: AdministracionComponent,
-
-   },
+  
    {
     path: 'login_signup',
     component: LoginSignupComponent,
 
    },
    {
-    path: 'consulta',
-    component: ConsultaComponent,
+    path: 'principal',
+    component: PrincipalComponent,
 
    },
    {
     path: '**',
-    redirectTo: 'consulta',
+    redirectTo: 'login_signup',
     pathMatch: 'full'
    }
 ];

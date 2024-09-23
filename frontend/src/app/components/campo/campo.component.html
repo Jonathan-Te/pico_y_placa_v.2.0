@@ -5,7 +5,8 @@
         style="width: 100%;"
         id="{{id}}" 
         type="{{tipodecampo}}"
-        [(ngModel)]="textoCampo" />
+        [(ngModel)]="textoCampo" 
+        (ngModelChange)="onTextoCampoChange($event)"/>
     <small id="{{id}}-help">
         {{ayuda}}
     </small>
